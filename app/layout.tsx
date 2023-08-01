@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
+import Modal from './components/Modals/Modal'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunito.className}>
+        <Modal isOpen/>
         <Navbar />
         {children}
       </body>
